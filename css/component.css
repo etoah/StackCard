@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.elasticstack {
+.stack-card {
 	position: relative;
 	margin: 40px auto;
 	padding: 0;
@@ -19,14 +19,14 @@
 	perspective-origin: 50% 150%;
 }
 
-.no-js .elasticstack {
+.no-js .stack-card {
 	max-width: 1090px;
 	width: 100%;
 	height: auto;
 	text-align: center;
 }
 
-.elasticstack li {
+.stack-card li {
 	position: absolute;
 	z-index: 1;
 	width: 340px;
@@ -43,7 +43,7 @@
 	transform-style: preserve-3d;
 }
 
-.no-js .elasticstack li {
+.no-js .stack-card li {
 	position: relative;
 	display: inline-block;
 	opacity: 1;
@@ -53,11 +53,11 @@
 	transform: translate3d(0,0,0);
 }
 
-.elasticstack li img {
+.stack-card li img {
 	display: block;
 }
 
-.elasticstack li h5 {
+.stack-card li h5 {
 	margin: 0 5px;
 	color: #143f51;
 	height: 60px;
@@ -67,12 +67,12 @@
 	line-height: 60px;
 }
 
-.elasticstack li.animate {
+.stack-card li.animate {
 	-webkit-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
 }
 
-.elasticstack li.move-back {
+.stack-card li.move-back {
 	/* http://matthewlein.com/ceaser/ */
 	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.470, 1); /* older webkit */
 	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.470, 1.515);
