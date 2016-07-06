@@ -17,16 +17,7 @@
 
 	// support
 	var is3d = !!getStyleProperty( 'perspective' ),
-		supportTransitions = Modernizr.csstransitions,
-		// transition end event name
-		transEndEventNames = {
-			'WebkitTransition': 'webkitTransitionEnd',
-			'MozTransition': 'transitionend',
-			'OTransition': 'oTransitionEnd',
-			'msTransition': 'MSTransitionEnd',
-			'transition': 'transitionend'
-		},
-		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ];
+		transEndEventName = 'transitionend';
 
 	function StackCard( el, options ) {
 		this.container = el;
@@ -37,7 +28,6 @@
 
 	function setTransformStyle( el, tval ) {
 		el.style.WebkitTransform = tval;
-		el.style.msTransform = tval;
 		el.style.transform = tval;
 	}
 
@@ -165,13 +155,8 @@
 				// callback
 				self.options.onUpdateStack( self.current );
 			};
-
-		if( supportTransitions ) {
 			instance.element.addEventListener( transEndEventName, onEndTransFn );
-		}
-		else {
-			onEndTransFn.call();
-		}
+
 	};
 
 	StackCard.prototype._moveBack = function( instance ) {

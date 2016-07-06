@@ -19,13 +19,6 @@
 	perspective-origin: 50% 150%;
 }
 
-.no-js .stack-card {
-	max-width: 1090px;
-	width: 100%;
-	height: auto;
-	text-align: center;
-}
-
 .stack-card li {
 	position: absolute;
 	z-index: 1;
@@ -43,15 +36,6 @@
 	transform-style: preserve-3d;
 }
 
-.no-js .stack-card li {
-	position: relative;
-	display: inline-block;
-	opacity: 1;
-	margin: 10px;
-	cursor: default;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
 
 .stack-card li img {
 	display: block;
