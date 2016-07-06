@@ -222,16 +222,6 @@
 		if( this._outOfBounds( instance ) ) {
 			this._moveAway( instance );
 		}
-		else {
-			// the second and third items also move
-			var item2 = this._secondItem(), item3 = this._thirdItem();
-			if( item2 ) {
-				setTransformStyle( item2, is3d ? 'translate3d(' + ( instance.position.x * .6 ) + 'px,' + ( instance.position.y * .6 ) + 'px, -60px)' : 'translate(' + ( instance.position.x * .6 ) + 'px,' + ( instance.position.y * .6 ) + 'px)' );
-			}
-			if( item3 ) {
-				setTransformStyle( item3, is3d ? 'translate3d(' + ( instance.position.x * .3 ) + 'px,' + ( instance.position.y * .3 ) + 'px, -120px)' : 'translate(' + ( instance.position.x * .3 ) + 'px,' + ( instance.position.y * .3 ) + 'px)' );
-			}
-		}
 	};
 
 	ElastiStack.prototype._onDragEnd = function( instance, event, pointer ) {
